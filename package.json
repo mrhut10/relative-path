@@ -1,11 +1,22 @@
 {
     "name": "relative-path",
     "version": "0.0.0",
-    "main": "index.js",
-    "bin": {
-        "relative-path": "./index.js"
+    "main": "dist/index.js",
+    "scripts": {
+        "prepare": "tsc"
     },
+    "bin": {
+        "relative-path": "./cli.js"
+    },
+    "files": [
+        "dist/**/*",
+        "package.json",
+        "README.md",
+        "cli.js"
+    ],
     "devDependencies": {
-        "copy-paste": "1.5.3"
+        "copy-paste": "1.5.3",
+        "typescript": "^5.2.2"
     }
+    
 }

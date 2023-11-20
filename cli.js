@@ -1,7 +1,9 @@
 #!/usr/bin/env node
+
 const path = require('path');
 const { copy : copyClipboard } = require('copy-paste');
 const { exit } = require('process');
+const { relativePath } = require('./dist/index');
 const args = process.argv.slice(2);
 
 
@@ -57,11 +59,11 @@ if (reverse) paths = paths.reverse();
 
 
 const [fromPath, toPath] = paths;
-const relativePath = path.relative(path.dirname(fromPath), toPath);
+const result = relativePath(fromPath, toPath);
 
-console.log(relativePath);
+console.log(result);
 
 if (copy) {
-    copyClipboard(relativePath);
+    copyClipboard(result);
     console.log(`have written to clipboard for you`);
 }
