@@ -1,0 +1,11 @@
+{
+    "name": "relative-path",
+    "version": "0.0.0",
+    "main": "index.js",
+    "bin": {
+        "relative-path": "./index.js"
+    },
+    "devDependencies": {
+        "copy-paste": "1.5.3"
+    }
+}
